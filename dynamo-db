@@ -1,0 +1,54 @@
+{
+"amount": 5.07,
+"partition_key": "1",
+"transactionType": "PURCHASE"
+}
+
+
+{
+"amount": 25,
+"partition_key": "2",
+"transactionType": "REFUND"
+}
+
+
+
+
+
+import json
+
+def lambda_handler(event, context):
+    # TODO implement
+    print(event)
+    return {
+        'statusCode': 200,
+        'body': json.dumps('Hello from Lambda!')
+    }
+
+
+
+
+
+
+
+
+import json
+
+def lambda_handler(event, context):
+    # TODO implement
+
+    # Get transactionID from URL
+    transactionID = event['queryStringParameters']['transactionID']
+    print(transactionID)
+
+
+    # Get data from dynamoDB for transactionID
+
+
+    # return data back to URL
+
+
+    return {
+        'statusCode': 200,
+        'body': json.dumps('Hello from Lambda!')
+    }
